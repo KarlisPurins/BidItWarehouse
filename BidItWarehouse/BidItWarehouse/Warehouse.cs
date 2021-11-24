@@ -62,5 +62,11 @@ namespace BidItWarehouse
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void warehouseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Warehouse().Show();
+            this.Hide();
+        }
     }
 }
