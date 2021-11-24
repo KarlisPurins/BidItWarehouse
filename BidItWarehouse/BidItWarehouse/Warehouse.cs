@@ -68,5 +68,11 @@ namespace BidItWarehouse
             new Warehouse().Show();
             this.Hide();
         }
+
+        private void inventoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Inventory().Show();
+            this.Hide();
+        }
     }
 }
