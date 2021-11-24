@@ -89,7 +89,7 @@ namespace BidItWarehouse
             this.logoutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.logoutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -98,7 +98,7 @@ namespace BidItWarehouse
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -117,7 +117,7 @@ namespace BidItWarehouse
             this.warehouseToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.warehouseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.warehouseToolStripMenuItem.Name = "warehouseToolStripMenuItem";
-            this.warehouseToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.warehouseToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.warehouseToolStripMenuItem.Text = "Warehouse";
             // 
             // inventoryToolStripMenuItem
@@ -125,7 +125,7 @@ namespace BidItWarehouse
             this.inventoryToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.inventoryToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
-            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.inventoryToolStripMenuItem.Text = "Inventory";
             // 
             // helpToolStripMenuItem
@@ -142,7 +142,7 @@ namespace BidItWarehouse
             this.aboutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -173,7 +173,7 @@ namespace BidItWarehouse
             // 
             this.lblImageURL.AutoSize = true;
             this.lblImageURL.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImageURL.Location = new System.Drawing.Point(155, 254);
+            this.lblImageURL.Location = new System.Drawing.Point(155, 256);
             this.lblImageURL.Name = "lblImageURL";
             this.lblImageURL.Size = new System.Drawing.Size(96, 19);
             this.lblImageURL.TabIndex = 34;
@@ -183,7 +183,7 @@ namespace BidItWarehouse
             // 
             this.lblStartingPrice.AutoSize = true;
             this.lblStartingPrice.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartingPrice.Location = new System.Drawing.Point(155, 211);
+            this.lblStartingPrice.Location = new System.Drawing.Point(155, 213);
             this.lblStartingPrice.Name = "lblStartingPrice";
             this.lblStartingPrice.Size = new System.Drawing.Size(119, 19);
             this.lblStartingPrice.TabIndex = 33;
@@ -193,7 +193,7 @@ namespace BidItWarehouse
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(155, 169);
+            this.lblDescription.Location = new System.Drawing.Point(155, 171);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(106, 19);
             this.lblDescription.TabIndex = 32;
@@ -203,7 +203,7 @@ namespace BidItWarehouse
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(155, 125);
+            this.lblName.Location = new System.Drawing.Point(155, 127);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(54, 19);
             this.lblName.TabIndex = 31;
@@ -212,7 +212,7 @@ namespace BidItWarehouse
             // txtImageURL
             // 
             this.txtImageURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtImageURL.Location = new System.Drawing.Point(311, 254);
+            this.txtImageURL.Location = new System.Drawing.Point(311, 256);
             this.txtImageURL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtImageURL.Name = "txtImageURL";
             this.txtImageURL.Size = new System.Drawing.Size(367, 23);
@@ -221,7 +221,7 @@ namespace BidItWarehouse
             // txtStartPrice
             // 
             this.txtStartPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtStartPrice.Location = new System.Drawing.Point(311, 211);
+            this.txtStartPrice.Location = new System.Drawing.Point(311, 213);
             this.txtStartPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStartPrice.Name = "txtStartPrice";
             this.txtStartPrice.Size = new System.Drawing.Size(177, 23);
@@ -230,7 +230,7 @@ namespace BidItWarehouse
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtDescription.Location = new System.Drawing.Point(311, 169);
+            this.txtDescription.Location = new System.Drawing.Point(311, 171);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -240,7 +240,7 @@ namespace BidItWarehouse
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtName.Location = new System.Drawing.Point(311, 125);
+            this.txtName.Location = new System.Drawing.Point(311, 127);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(177, 23);
@@ -266,13 +266,14 @@ namespace BidItWarehouse
             this.pictureBox2.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = null;
             this.pictureBox2.Location = new System.Drawing.Point(750, 7);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // pictureBox1
             // 
@@ -308,7 +309,7 @@ namespace BidItWarehouse
             this.Controls.Add(this.mnuMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.mnuMainMenu;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Warehouse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Warehouse";
