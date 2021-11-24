@@ -37,12 +37,10 @@ namespace BidItWarehouse
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warehouseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblWarehouse = new System.Windows.Forms.Label();
-            this.pbxExit = new System.Windows.Forms.PictureBox();
             this.lblImageURL = new System.Windows.Forms.Label();
             this.lblStartingPrice = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
@@ -52,9 +50,12 @@ namespace BidItWarehouse
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mnuMainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuMainMenu
@@ -68,8 +69,8 @@ namespace BidItWarehouse
             this.helpToolStripMenuItem});
             this.mnuMainMenu.Location = new System.Drawing.Point(0, 0);
             this.mnuMainMenu.Name = "mnuMainMenu";
-            this.mnuMainMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.mnuMainMenu.Size = new System.Drawing.Size(820, 27);
+            this.mnuMainMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 8);
+            this.mnuMainMenu.Size = new System.Drawing.Size(808, 33);
             this.mnuMainMenu.TabIndex = 10;
             this.mnuMainMenu.Text = "menuStrip1";
             // 
@@ -90,6 +91,7 @@ namespace BidItWarehouse
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -98,13 +100,13 @@ namespace BidItWarehouse
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.warehouseToolStripMenuItem,
-            this.inventoryToolStripMenuItem,
-            this.loginToolStripMenuItem});
+            this.inventoryToolStripMenuItem});
             this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
@@ -126,14 +128,6 @@ namespace BidItWarehouse
             this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.inventoryToolStripMenuItem.Text = "Inventory";
             // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
-            this.loginToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.loginToolStripMenuItem.Text = "Login";
-            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -150,17 +144,17 @@ namespace BidItWarehouse
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
             this.panel1.Controls.Add(this.lblWarehouse);
-            this.panel1.Controls.Add(this.pbxExit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 27);
+            this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(820, 63);
+            this.panel1.Size = new System.Drawing.Size(808, 63);
             this.panel1.TabIndex = 25;
             // 
             // lblWarehouse
@@ -175,23 +169,11 @@ namespace BidItWarehouse
             this.lblWarehouse.TabIndex = 9;
             this.lblWarehouse.Text = "Warehouse";
             // 
-            // pbxExit
-            // 
-            this.pbxExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxExit.Image = ((System.Drawing.Image)(resources.GetObject("pbxExit.Image")));
-            this.pbxExit.Location = new System.Drawing.Point(1067, 12);
-            this.pbxExit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pbxExit.Name = "pbxExit";
-            this.pbxExit.Size = new System.Drawing.Size(27, 20);
-            this.pbxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxExit.TabIndex = 1;
-            this.pbxExit.TabStop = false;
-            // 
             // lblImageURL
             // 
             this.lblImageURL.AutoSize = true;
             this.lblImageURL.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImageURL.Location = new System.Drawing.Point(155, 244);
+            this.lblImageURL.Location = new System.Drawing.Point(155, 254);
             this.lblImageURL.Name = "lblImageURL";
             this.lblImageURL.Size = new System.Drawing.Size(96, 19);
             this.lblImageURL.TabIndex = 34;
@@ -201,7 +183,7 @@ namespace BidItWarehouse
             // 
             this.lblStartingPrice.AutoSize = true;
             this.lblStartingPrice.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartingPrice.Location = new System.Drawing.Point(155, 201);
+            this.lblStartingPrice.Location = new System.Drawing.Point(155, 211);
             this.lblStartingPrice.Name = "lblStartingPrice";
             this.lblStartingPrice.Size = new System.Drawing.Size(119, 19);
             this.lblStartingPrice.TabIndex = 33;
@@ -211,7 +193,7 @@ namespace BidItWarehouse
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(155, 159);
+            this.lblDescription.Location = new System.Drawing.Point(155, 169);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(106, 19);
             this.lblDescription.TabIndex = 32;
@@ -221,7 +203,7 @@ namespace BidItWarehouse
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(155, 115);
+            this.lblName.Location = new System.Drawing.Point(155, 125);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(54, 19);
             this.lblName.TabIndex = 31;
@@ -230,7 +212,7 @@ namespace BidItWarehouse
             // txtImageURL
             // 
             this.txtImageURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtImageURL.Location = new System.Drawing.Point(311, 244);
+            this.txtImageURL.Location = new System.Drawing.Point(311, 254);
             this.txtImageURL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtImageURL.Name = "txtImageURL";
             this.txtImageURL.Size = new System.Drawing.Size(367, 23);
@@ -239,7 +221,7 @@ namespace BidItWarehouse
             // txtStartPrice
             // 
             this.txtStartPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtStartPrice.Location = new System.Drawing.Point(311, 201);
+            this.txtStartPrice.Location = new System.Drawing.Point(311, 211);
             this.txtStartPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStartPrice.Name = "txtStartPrice";
             this.txtStartPrice.Size = new System.Drawing.Size(177, 23);
@@ -248,7 +230,7 @@ namespace BidItWarehouse
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtDescription.Location = new System.Drawing.Point(311, 159);
+            this.txtDescription.Location = new System.Drawing.Point(311, 169);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -258,7 +240,7 @@ namespace BidItWarehouse
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.txtName.Location = new System.Drawing.Point(311, 115);
+            this.txtName.Location = new System.Drawing.Point(311, 125);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(177, 23);
@@ -279,14 +261,42 @@ namespace BidItWarehouse
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(750, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(776, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Warehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(820, 366);
+            this.ClientSize = new System.Drawing.Size(808, 366);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblImageURL);
             this.Controls.Add(this.lblStartingPrice);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtImageURL);
@@ -296,16 +306,19 @@ namespace BidItWarehouse
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mnuMainMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.mnuMainMenu;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Warehouse";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Warehouse";
             this.Load += new System.EventHandler(this.Warehouse_Load);
             this.mnuMainMenu.ResumeLayout(false);
             this.mnuMainMenu.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,11 +333,9 @@ namespace BidItWarehouse
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem warehouseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblWarehouse;
-        private System.Windows.Forms.PictureBox pbxExit;
         private System.Windows.Forms.Label lblImageURL;
         private System.Windows.Forms.Label lblStartingPrice;
         private System.Windows.Forms.Label lblDescription;
@@ -334,6 +345,8 @@ namespace BidItWarehouse
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

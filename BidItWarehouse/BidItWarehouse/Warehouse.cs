@@ -21,6 +21,7 @@ namespace BidItWarehouse
         //[{"_id":"6183cf926215e401a419aabf","name":"product1",
         //"description":"description1","startingPrice":"startingPrice1",
         //"imageURL":"imageURL1","__v":0},
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
 
@@ -29,6 +30,32 @@ namespace BidItWarehouse
         private void Warehouse_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This app does this and that!", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
