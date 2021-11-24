@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -64,5 +65,24 @@ namespace BidItWarehouse
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void Inventory_Load(object sender, EventArgs e)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://biditwarehouse.herokuapp.com/products ");
+            HttpResponseMessage response = client.GetAsync("/products").Result;
+            var prod = response.Content.ReadAsAsync<IEnumerable<Product>>().Result;
+            dataGridView1.DataSource = prod;
+        }
+
+        private void Inventory_Load_1(object sender, EventArgs e)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://biditwarehouse.herokuapp.com/products ");
+            HttpResponseMessage response = client.GetAsync("/products").Result;
+            var prod = response.Content.ReadAsAsync<IEnumerable<Product>>().Result;
+            dataGridView1.DataSource = prod;
+        }
     }
 }
+

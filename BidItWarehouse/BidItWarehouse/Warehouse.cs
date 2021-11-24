@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http;
+using System.Net.Http.Formatting;
+using Newtonsoft.Json;
+//using Warehouse;
 
 namespace BidItWarehouse
 {
@@ -79,5 +83,41 @@ namespace BidItWarehouse
         {
 
         }
+
+        private void btnSubmit_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        public static Task<HttpResponseMessage> SubmitPersonToAPIAsync(Product product)
+        {
+            HttpClient httpClient = new HttpClient();
+
+            string productJson = JsonConvert.SerializeObject(product);
+
+            HttpContent stringContent = new StringContent(productJson, Encoding.UTF8, "application/json");
+
+            return httpClient.PostAsync("https://biditwarehouse.herokuapp.com/products", stringContent);
+        }
+
+        private void btnSubmit_Click_2(object sender, EventArgs e)
+        {
+            Product product = new Product { name = txtName.Text, description = txtDescription.Text, startingPrice = txtStartPrice.Text, imageURL = txtImageURL.Text, };
+            SubmitPersonToAPIAsync(product).Wait();
+            MessageBox.Show("Posted!", "Submitted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    }
+
+    public class Product
+    {
+        public string _ID { get; set; }
+        [JsonProperty("name")]
+        public string name { get; set; }
+        [JsonProperty("description")]
+        public string description { get; set; }
+        [JsonProperty("startingPrice")]
+        public string startingPrice { get; set; }
+        [JsonProperty("imageURL")]
+        public string imageURL { get; set; }
     }
 }
