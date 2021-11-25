@@ -61,9 +61,9 @@ namespace BidItWarehouse
             this.txtUpdateName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelDeleteConfirm = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnDeleteDeny = new System.Windows.Forms.Button();
             this.btnDeleteConfirm = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.mnuMainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -433,6 +433,9 @@ namespace BidItWarehouse
             // 
             // panelDeleteConfirm
             // 
+            this.panelDeleteConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDeleteConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
             this.panelDeleteConfirm.Controls.Add(this.btnDeleteDeny);
             this.panelDeleteConfirm.Controls.Add(this.btnDeleteConfirm);
@@ -442,19 +445,6 @@ namespace BidItWarehouse
             this.panelDeleteConfirm.Size = new System.Drawing.Size(200, 100);
             this.panelDeleteConfirm.TabIndex = 11;
             this.panelDeleteConfirm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDeleteConfirm_Paint);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(28, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 30);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Are you sure you \nwant to delete this ?";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnDeleteDeny
             // 
@@ -485,6 +475,19 @@ namespace BidItWarehouse
             this.btnDeleteConfirm.Text = "Yes";
             this.btnDeleteConfirm.UseVisualStyleBackColor = false;
             this.btnDeleteConfirm.Click += new System.EventHandler(this.btnDeleteConfirm_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(28, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 30);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Are you sure you \nwant to delete this ?";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Inventory
             // 

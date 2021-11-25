@@ -54,5 +54,10 @@ namespace BidItWarehouse
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

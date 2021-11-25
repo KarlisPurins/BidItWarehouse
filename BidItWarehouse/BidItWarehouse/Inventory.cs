@@ -146,7 +146,10 @@ namespace BidItWarehouse
 
         private void panelDeleteConfirm_Paint(object sender, PaintEventArgs e)
         {
+            panelDeleteConfirm.Location = new Point(ClientSize.Width / 2 - panelDeleteConfirm.Size.Width / 2,
+              ClientSize.Height / 2 - panelDeleteConfirm.Size.Height / 2);
 
+            panelDeleteConfirm.Anchor = AnchorStyles.None;
         }
 
         private void label3_Click(object sender, EventArgs e)
