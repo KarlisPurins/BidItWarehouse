@@ -164,6 +164,8 @@ namespace BidItWarehouse
             dataGridView1.DataSource = prod;
             dataGridView1.Refresh();
             panelDeleteConfirm.Visible = false;
+            new Inventory().Show();
+            this.Hide();
         }
 
         private void btnDeleteDeny_Click(object sender, EventArgs e)
