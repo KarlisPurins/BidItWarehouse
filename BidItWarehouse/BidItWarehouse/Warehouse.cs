@@ -106,6 +106,25 @@ namespace BidItWarehouse
             SubmitPersonToAPIAsync(product).Wait();
             MessageBox.Show("Posted!", "Submitted", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
+
+        private void btnScanBarcode_Click_1(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            string[] name = { "Statue", "Car", "House", "Painting", "Sword" };
+            string[] description = { "Exotic", "Antique", "Basic", "Boring", "Exquisite" };
+            string[] price = { "10000", "2000", "42000", "500000", "3000000" };
+            string[] imgurl = { "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F0x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349", "https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607", "https://www.dhresource.com/0x0/f2/albu/g10/M00/74/29/rBVaWV4tRHWAf5FUAAJU33_koOQ340.jpg/abstract-thinker-people-shape-modern-sculpture.jpg", "https://n4.sdlcdn.com/imgs/i/i/h/100yellow-Oil-Painting-Canvas-Painting-SDL472745786-1-8708f.jpeg", "https://images.partydelights.co.uk/WEAP/07/4/front/v3/fac/1.jpg" };
+            int i1 = rnd.Next(name.Length);
+            int i2 = rnd.Next(description.Length);
+            int i3 = rnd.Next(price.Length);
+            int i4 = rnd.Next(imgurl.Length);
+            txtName.Text = name[i1].ToString();
+            txtDescription.Text = description[i2].ToString();
+            txtStartPrice.Text = price[i3].ToString();
+            txtImageURL.Text = imgurl[i4].ToString();
+        }
     }
 
     public class Product
