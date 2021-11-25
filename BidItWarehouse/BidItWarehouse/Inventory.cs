@@ -14,6 +14,10 @@ namespace BidItWarehouse
     public partial class Inventory : Form
     {
         string idToDelete;
+        string selectedName;
+        string selectedDescription;
+        string selectedStartPrice;
+        string selectedImageURL;
         public Inventory()
         {
             InitializeComponent();
@@ -73,6 +77,7 @@ namespace BidItWarehouse
 
         private void Inventory_Load_1(object sender, EventArgs e)
         {
+            panelUpdate.Visible = false;
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://biditwarehouse.herokuapp.com/products ");
             HttpResponseMessage response = client.GetAsync("/products").Result;
@@ -93,6 +98,10 @@ namespace BidItWarehouse
         public void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idToDelete = this.dataGridView1.Rows[e.RowIndex].Cells["_ID"].Value.ToString();
+            selectedName = this.dataGridView1.Rows[e.RowIndex].Cells["name"].Value.ToString();
+            selectedDescription = this.dataGridView1.Rows[e.RowIndex].Cells["description"].Value.ToString();
+            selectedStartPrice = this.dataGridView1.Rows[e.RowIndex].Cells["startingPrice"].Value.ToString();
+            selectedImageURL = this.dataGridView1.Rows[e.RowIndex].Cells["imageURL"].Value.ToString();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -103,6 +112,20 @@ namespace BidItWarehouse
         {
             HttpClient httpClient = new HttpClient();
             return httpClient.DeleteAsync("https://biditwarehouse.herokuapp.com/products/" + idToDelete);
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            panelUpdate.Visible = true;
+            txtUpdateName.Text = selectedName;
+            txtUpdateDescription.Text = selectedDescription;
+            txtUpdateStartPrice.Text = selectedStartPrice;
+            txtUpdateImageURL.Text = selectedImageURL;
+        }
+
+        private void btnUpdateCancel_Click(object sender, EventArgs e)
+        {
+            panelUpdate.Visible = false;
         }
     }
 }
