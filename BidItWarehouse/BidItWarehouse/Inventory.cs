@@ -42,7 +42,8 @@ namespace BidItWarehouse
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("API list", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            new About().Show();
+            this.Hide();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
