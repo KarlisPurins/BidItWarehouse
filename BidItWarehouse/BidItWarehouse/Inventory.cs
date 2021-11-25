@@ -104,6 +104,17 @@ namespace BidItWarehouse
             HttpClient httpClient = new HttpClient();
             return httpClient.DeleteAsync("https://biditwarehouse.herokuapp.com/products/" + idToDelete);
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            deleteProduct(idToDelete);
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://biditwarehouse.herokuapp.com/products ");
+            HttpResponseMessage response = client.GetAsync("/products").Result;
+            var prod = response.Content.ReadAsAsync<IEnumerable<Product>>().Result;
+            dataGridView1.DataSource = prod;
+            dataGridView1.Refresh();
+        }
     }
 }
 

@@ -46,7 +46,7 @@ namespace BidItWarehouse
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.mnuMainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -54,6 +54,7 @@ namespace BidItWarehouse
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuMainMenu
@@ -114,7 +115,7 @@ namespace BidItWarehouse
             this.warehouseToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.warehouseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.warehouseToolStripMenuItem.Name = "warehouseToolStripMenuItem";
-            this.warehouseToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.warehouseToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.warehouseToolStripMenuItem.Text = "Warehouse";
             this.warehouseToolStripMenuItem.Click += new System.EventHandler(this.warehouseToolStripMenuItem_Click);
             // 
@@ -139,6 +140,7 @@ namespace BidItWarehouse
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
+            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lblWarehouse);
@@ -154,8 +156,8 @@ namespace BidItWarehouse
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(749, 13);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(705, 13);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 31);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -236,16 +238,19 @@ namespace BidItWarehouse
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 30;
             // 
-            // btnDelete
+            // pictureBox5
             // 
-            this.btnDelete.Location = new System.Drawing.Point(40, 343);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(56, 19);
-            this.btnDelete.TabIndex = 31;
-            this.btnDelete.Text = "delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(749, 13);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 37;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // Inventory
             // 
@@ -253,7 +258,6 @@ namespace BidItWarehouse
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(808, 366);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
@@ -274,6 +278,7 @@ namespace BidItWarehouse
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,6 +302,6 @@ namespace BidItWarehouse
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
