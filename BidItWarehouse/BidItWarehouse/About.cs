@@ -22,5 +22,16 @@ namespace BidItWarehouse
             new Warehouse().Show();
             this.Hide();
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            new Warehouse().Show();
+            this.Hide();
+        }
     }
 }
