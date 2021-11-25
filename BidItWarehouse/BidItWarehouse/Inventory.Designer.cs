@@ -39,6 +39,7 @@ namespace BidItWarehouse
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,10 @@ namespace BidItWarehouse
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelUpdate = new System.Windows.Forms.Panel();
+            this.lblImageURL = new System.Windows.Forms.Label();
+            this.lblStartPrice = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.btnUpdateCancel = new System.Windows.Forms.Button();
             this.btnUpdatePost = new System.Windows.Forms.Button();
             this.txtUpdateImageURL = new System.Windows.Forms.TextBox();
@@ -55,11 +60,10 @@ namespace BidItWarehouse
             this.txtUpdateDescription = new System.Windows.Forms.TextBox();
             this.txtUpdateName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonUpdate = new System.Windows.Forms.Button();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.lblStartPrice = new System.Windows.Forms.Label();
-            this.lblImageURL = new System.Windows.Forms.Label();
+            this.panelDeleteConfirm = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnDeleteDeny = new System.Windows.Forms.Button();
+            this.btnDeleteConfirm = new System.Windows.Forms.Button();
             this.mnuMainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -69,6 +73,7 @@ namespace BidItWarehouse
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelUpdate.SuspendLayout();
+            this.panelDeleteConfirm.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuMainMenu
@@ -165,6 +170,21 @@ namespace BidItWarehouse
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(808, 63);
             this.panel1.TabIndex = 26;
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.BackColor = System.Drawing.Color.Maroon;
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUpdate.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
+            this.buttonUpdate.Location = new System.Drawing.Point(594, 13);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(86, 31);
+            this.buttonUpdate.TabIndex = 33;
+            this.buttonUpdate.Text = "update";
+            this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // pictureBox5
             // 
@@ -281,12 +301,62 @@ namespace BidItWarehouse
             this.panelUpdate.Controls.Add(this.txtUpdateDescription);
             this.panelUpdate.Controls.Add(this.txtUpdateName);
             this.panelUpdate.Controls.Add(this.label2);
-            this.panelUpdate.Location = new System.Drawing.Point(225, 108);
-            this.panelUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelUpdate.Location = new System.Drawing.Point(182, 101);
+            this.panelUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.panelUpdate.Name = "panelUpdate";
-            this.panelUpdate.Size = new System.Drawing.Size(417, 150);
+            this.panelUpdate.Size = new System.Drawing.Size(417, 151);
             this.panelUpdate.TabIndex = 32;
+            this.panelUpdate.Visible = false;
             this.panelUpdate.Paint += new System.Windows.Forms.PaintEventHandler(this.panelUpdate_Paint);
+            // 
+            // lblImageURL
+            // 
+            this.lblImageURL.AutoSize = true;
+            this.lblImageURL.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImageURL.ForeColor = System.Drawing.Color.White;
+            this.lblImageURL.Location = new System.Drawing.Point(303, 58);
+            this.lblImageURL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblImageURL.Name = "lblImageURL";
+            this.lblImageURL.Size = new System.Drawing.Size(79, 15);
+            this.lblImageURL.TabIndex = 10;
+            this.lblImageURL.Text = "Image URL";
+            // 
+            // lblStartPrice
+            // 
+            this.lblStartPrice.AutoSize = true;
+            this.lblStartPrice.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartPrice.ForeColor = System.Drawing.Color.White;
+            this.lblStartPrice.Location = new System.Drawing.Point(210, 58);
+            this.lblStartPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStartPrice.Name = "lblStartPrice";
+            this.lblStartPrice.Size = new System.Drawing.Size(80, 15);
+            this.lblStartPrice.TabIndex = 9;
+            this.lblStartPrice.Text = "Start price";
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
+            this.lblDescription.Location = new System.Drawing.Point(111, 58);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(88, 15);
+            this.lblDescription.TabIndex = 8;
+            this.lblDescription.Text = "Description";
+            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(15, 58);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(45, 15);
+            this.lblName.TabIndex = 7;
+            this.lblName.Text = "Name";
             // 
             // btnUpdateCancel
             // 
@@ -295,7 +365,7 @@ namespace BidItWarehouse
             this.btnUpdateCancel.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateCancel.ForeColor = System.Drawing.Color.White;
             this.btnUpdateCancel.Location = new System.Drawing.Point(342, 113);
-            this.btnUpdateCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateCancel.Name = "btnUpdateCancel";
             this.btnUpdateCancel.Size = new System.Drawing.Size(56, 24);
             this.btnUpdateCancel.TabIndex = 6;
@@ -310,7 +380,7 @@ namespace BidItWarehouse
             this.btnUpdatePost.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdatePost.ForeColor = System.Drawing.Color.White;
             this.btnUpdatePost.Location = new System.Drawing.Point(282, 113);
-            this.btnUpdatePost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdatePost.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdatePost.Name = "btnUpdatePost";
             this.btnUpdatePost.Size = new System.Drawing.Size(56, 24);
             this.btnUpdatePost.TabIndex = 5;
@@ -320,7 +390,7 @@ namespace BidItWarehouse
             // txtUpdateImageURL
             // 
             this.txtUpdateImageURL.Location = new System.Drawing.Point(306, 75);
-            this.txtUpdateImageURL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUpdateImageURL.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateImageURL.Name = "txtUpdateImageURL";
             this.txtUpdateImageURL.Size = new System.Drawing.Size(92, 20);
             this.txtUpdateImageURL.TabIndex = 4;
@@ -328,7 +398,7 @@ namespace BidItWarehouse
             // txtUpdateStartPrice
             // 
             this.txtUpdateStartPrice.Location = new System.Drawing.Point(210, 75);
-            this.txtUpdateStartPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUpdateStartPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateStartPrice.Name = "txtUpdateStartPrice";
             this.txtUpdateStartPrice.Size = new System.Drawing.Size(92, 20);
             this.txtUpdateStartPrice.TabIndex = 3;
@@ -336,7 +406,7 @@ namespace BidItWarehouse
             // txtUpdateDescription
             // 
             this.txtUpdateDescription.Location = new System.Drawing.Point(114, 75);
-            this.txtUpdateDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUpdateDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateDescription.Name = "txtUpdateDescription";
             this.txtUpdateDescription.Size = new System.Drawing.Size(92, 20);
             this.txtUpdateDescription.TabIndex = 2;
@@ -344,7 +414,7 @@ namespace BidItWarehouse
             // txtUpdateName
             // 
             this.txtUpdateName.Location = new System.Drawing.Point(18, 75);
-            this.txtUpdateName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUpdateName.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateName.Name = "txtUpdateName";
             this.txtUpdateName.Size = new System.Drawing.Size(92, 20);
             this.txtUpdateName.TabIndex = 1;
@@ -361,69 +431,60 @@ namespace BidItWarehouse
             this.label2.TabIndex = 0;
             this.label2.Text = "Update";
             // 
-            // buttonUpdate
+            // panelDeleteConfirm
             // 
-            this.buttonUpdate.BackColor = System.Drawing.Color.Maroon;
-            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdate.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.ForeColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(594, 13);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(86, 31);
-            this.buttonUpdate.TabIndex = 33;
-            this.buttonUpdate.Text = "update";
-            this.buttonUpdate.UseVisualStyleBackColor = false;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            this.panelDeleteConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
+            this.panelDeleteConfirm.Controls.Add(this.btnDeleteDeny);
+            this.panelDeleteConfirm.Controls.Add(this.btnDeleteConfirm);
+            this.panelDeleteConfirm.Controls.Add(this.label3);
+            this.panelDeleteConfirm.Location = new System.Drawing.Point(285, 257);
+            this.panelDeleteConfirm.Name = "panelDeleteConfirm";
+            this.panelDeleteConfirm.Size = new System.Drawing.Size(200, 100);
+            this.panelDeleteConfirm.TabIndex = 11;
+            this.panelDeleteConfirm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDeleteConfirm_Paint);
             // 
-            // lblName
+            // label3
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(15, 58);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 15);
-            this.lblName.TabIndex = 7;
-            this.lblName.Text = "Name";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(28, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 30);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Are you sure you \nwant to delete this ?";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // lblDescription
+            // btnDeleteDeny
             // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.ForeColor = System.Drawing.Color.White;
-            this.lblDescription.Location = new System.Drawing.Point(111, 58);
-            this.lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(88, 15);
-            this.lblDescription.TabIndex = 8;
-            this.lblDescription.Text = "Description";
-            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
+            this.btnDeleteDeny.BackColor = System.Drawing.Color.Maroon;
+            this.btnDeleteDeny.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteDeny.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteDeny.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteDeny.Location = new System.Drawing.Point(100, 63);
+            this.btnDeleteDeny.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteDeny.Name = "btnDeleteDeny";
+            this.btnDeleteDeny.Size = new System.Drawing.Size(56, 24);
+            this.btnDeleteDeny.TabIndex = 12;
+            this.btnDeleteDeny.Text = "No";
+            this.btnDeleteDeny.UseVisualStyleBackColor = false;
+            this.btnDeleteDeny.Click += new System.EventHandler(this.btnDeleteDeny_Click);
             // 
-            // lblStartPrice
+            // btnDeleteConfirm
             // 
-            this.lblStartPrice.AutoSize = true;
-            this.lblStartPrice.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartPrice.ForeColor = System.Drawing.Color.White;
-            this.lblStartPrice.Location = new System.Drawing.Point(210, 58);
-            this.lblStartPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblStartPrice.Name = "lblStartPrice";
-            this.lblStartPrice.Size = new System.Drawing.Size(80, 15);
-            this.lblStartPrice.TabIndex = 9;
-            this.lblStartPrice.Text = "Start price";
-            // 
-            // lblImageURL
-            // 
-            this.lblImageURL.AutoSize = true;
-            this.lblImageURL.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImageURL.ForeColor = System.Drawing.Color.White;
-            this.lblImageURL.Location = new System.Drawing.Point(303, 58);
-            this.lblImageURL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblImageURL.Name = "lblImageURL";
-            this.lblImageURL.Size = new System.Drawing.Size(79, 15);
-            this.lblImageURL.TabIndex = 10;
-            this.lblImageURL.Text = "Image URL";
+            this.btnDeleteConfirm.BackColor = System.Drawing.Color.Maroon;
+            this.btnDeleteConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteConfirm.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteConfirm.Location = new System.Drawing.Point(40, 63);
+            this.btnDeleteConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteConfirm.Name = "btnDeleteConfirm";
+            this.btnDeleteConfirm.Size = new System.Drawing.Size(56, 24);
+            this.btnDeleteConfirm.TabIndex = 11;
+            this.btnDeleteConfirm.Text = "Yes";
+            this.btnDeleteConfirm.UseVisualStyleBackColor = false;
+            this.btnDeleteConfirm.Click += new System.EventHandler(this.btnDeleteConfirm_Click);
             // 
             // Inventory
             // 
@@ -431,6 +492,7 @@ namespace BidItWarehouse
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(808, 366);
+            this.Controls.Add(this.panelDeleteConfirm);
             this.Controls.Add(this.panelUpdate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -455,6 +517,8 @@ namespace BidItWarehouse
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelUpdate.ResumeLayout(false);
             this.panelUpdate.PerformLayout();
+            this.panelDeleteConfirm.ResumeLayout(false);
+            this.panelDeleteConfirm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,5 +556,9 @@ namespace BidItWarehouse
         private System.Windows.Forms.Label lblStartPrice;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Panel panelDeleteConfirm;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnDeleteDeny;
+        private System.Windows.Forms.Button btnDeleteConfirm;
     }
 }

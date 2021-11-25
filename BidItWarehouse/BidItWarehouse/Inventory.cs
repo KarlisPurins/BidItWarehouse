@@ -77,6 +77,7 @@ namespace BidItWarehouse
 
         private void Inventory_Load_1(object sender, EventArgs e)
         {
+            panelDeleteConfirm.Visible = false;
             panelUpdate.Visible = false;
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("https://biditwarehouse.herokuapp.com/products ");
@@ -116,13 +117,7 @@ namespace BidItWarehouse
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            deleteProduct(idToDelete);
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://biditwarehouse.herokuapp.com/products ");
-            HttpResponseMessage response = client.GetAsync("/products").Result;
-            var prod = response.Content.ReadAsAsync<IEnumerable<Product>>().Result;
-            dataGridView1.DataSource = prod;
-            dataGridView1.Refresh();
+            panelDeleteConfirm.Visible = true;
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
@@ -148,7 +143,32 @@ namespace BidItWarehouse
         {
 
         }
+
+        private void panelDeleteConfirm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteConfirm_Click(object sender, EventArgs e)
+        {
+            deleteProduct(idToDelete);
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://biditwarehouse.herokuapp.com/products ");
+            HttpResponseMessage response = client.GetAsync("/products").Result;
+            var prod = response.Content.ReadAsAsync<IEnumerable<Product>>().Result;
+            dataGridView1.DataSource = prod;
+            dataGridView1.Refresh();
+            panelDeleteConfirm.Visible = false;
+        }
+
+        private void btnDeleteDeny_Click(object sender, EventArgs e)
+        {
+            panelDeleteConfirm.Visible = false;
+        }
     }
 }
-
-//a
