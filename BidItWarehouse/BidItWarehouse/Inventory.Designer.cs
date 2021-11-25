@@ -67,8 +67,8 @@ namespace BidItWarehouse
             this.helpToolStripMenuItem});
             this.mnuMainMenu.Location = new System.Drawing.Point(0, 0);
             this.mnuMainMenu.Name = "mnuMainMenu";
-            this.mnuMainMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 10);
-            this.mnuMainMenu.Size = new System.Drawing.Size(1077, 39);
+            this.mnuMainMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 8);
+            this.mnuMainMenu.Size = new System.Drawing.Size(808, 33);
             this.mnuMainMenu.TabIndex = 11;
             this.mnuMainMenu.Text = "menuStrip1";
             // 
@@ -79,7 +79,7 @@ namespace BidItWarehouse
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(62, 27);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(52, 23);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // logoutToolStripMenuItem
@@ -87,7 +87,7 @@ namespace BidItWarehouse
             this.logoutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.logoutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(166, 28);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -96,7 +96,7 @@ namespace BidItWarehouse
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(166, 28);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -106,7 +106,7 @@ namespace BidItWarehouse
             this.warehouseToolStripMenuItem});
             this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(78, 27);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // warehouseToolStripMenuItem
@@ -114,7 +114,7 @@ namespace BidItWarehouse
             this.warehouseToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.warehouseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.warehouseToolStripMenuItem.Name = "warehouseToolStripMenuItem";
-            this.warehouseToolStripMenuItem.Size = new System.Drawing.Size(209, 28);
+            this.warehouseToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.warehouseToolStripMenuItem.Text = "Warehouse";
             this.warehouseToolStripMenuItem.Click += new System.EventHandler(this.warehouseToolStripMenuItem_Click);
             // 
@@ -124,7 +124,7 @@ namespace BidItWarehouse
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(71, 27);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(59, 23);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -132,7 +132,7 @@ namespace BidItWarehouse
             this.aboutToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(159, 28);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(129, 24);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -143,10 +143,10 @@ namespace BidItWarehouse
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lblWarehouse);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 39);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 33);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1077, 78);
+            this.panel1.Size = new System.Drawing.Size(808, 63);
             this.panel1.TabIndex = 26;
             // 
             // pictureBox4
@@ -154,9 +154,10 @@ namespace BidItWarehouse
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(745, 13);
+            this.pictureBox4.Location = new System.Drawing.Point(749, 13);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 36);
+            this.pictureBox4.Size = new System.Drawing.Size(31, 31);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 36;
             this.pictureBox4.TabStop = false;
@@ -167,7 +168,6 @@ namespace BidItWarehouse
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(72, 72);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -180,10 +180,9 @@ namespace BidItWarehouse
             this.lblWarehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
             this.lblWarehouse.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWarehouse.ForeColor = System.Drawing.Color.White;
-            this.lblWarehouse.Location = new System.Drawing.Point(407, 16);
-            this.lblWarehouse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblWarehouse.Location = new System.Drawing.Point(305, 13);
             this.lblWarehouse.Name = "lblWarehouse";
-            this.lblWarehouse.Size = new System.Drawing.Size(191, 39);
+            this.lblWarehouse.Size = new System.Drawing.Size(153, 31);
             this.lblWarehouse.TabIndex = 9;
             this.lblWarehouse.Text = "Inventory";
             this.lblWarehouse.Click += new System.EventHandler(this.lblWarehouse_Click);
@@ -191,14 +190,13 @@ namespace BidItWarehouse
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(53, 142);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(40, 115);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(987, 274);
+            this.dataGridView1.Size = new System.Drawing.Size(740, 223);
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -208,10 +206,9 @@ namespace BidItWarehouse
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(1000, 9);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(750, 7);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
@@ -222,10 +219,9 @@ namespace BidItWarehouse
             this.pictureBox1.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1035, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(776, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
@@ -234,16 +230,18 @@ namespace BidItWarehouse
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 420);
+            this.label1.Location = new System.Drawing.Point(38, 341);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 30;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(902, 432);
+            this.btnDelete.Location = new System.Drawing.Point(40, 343);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(56, 19);
             this.btnDelete.TabIndex = 31;
             this.btnDelete.Text = "delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -251,10 +249,10 @@ namespace BidItWarehouse
             // 
             // Inventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1077, 450);
+            this.ClientSize = new System.Drawing.Size(808, 366);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -263,7 +261,6 @@ namespace BidItWarehouse
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mnuMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory";

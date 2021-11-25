@@ -87,6 +87,7 @@ namespace BidItWarehouse
             HttpResponseMessage response = client.GetAsync("/products").Result;
             var prod = response.Content.ReadAsAsync<IEnumerable<Product>>().Result;
             dataGridView1.DataSource = prod;
+            dataGridView1.Refresh();
         }
 
         public void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
