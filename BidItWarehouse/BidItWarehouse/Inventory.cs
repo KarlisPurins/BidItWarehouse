@@ -80,6 +80,15 @@ namespace BidItWarehouse
             dataGridView1.DataSource = prod;
         }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://biditwarehouse.herokuapp.com/products ");
+            HttpResponseMessage response = client.GetAsync("/products").Result;
+            var prod = response.Content.ReadAsAsync<IEnumerable<Product>>().Result;
+            dataGridView1.DataSource = prod;
+        }
+
         public void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idToDelete = this.dataGridView1.Rows[e.RowIndex].Cells["_ID"].Value.ToString();

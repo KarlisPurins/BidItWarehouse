@@ -40,7 +40,6 @@ namespace BidItWarehouse
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblWarehouse = new System.Windows.Forms.Label();
             this.lblImageURL = new System.Windows.Forms.Label();
             this.lblStartingPrice = new System.Windows.Forms.Label();
@@ -53,11 +52,12 @@ namespace BidItWarehouse
             this.btnSubmit = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.mnuMainMenu.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuMainMenu
@@ -119,7 +119,7 @@ namespace BidItWarehouse
             this.warehouseToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.warehouseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.warehouseToolStripMenuItem.Name = "warehouseToolStripMenuItem";
-            this.warehouseToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
+            this.warehouseToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.warehouseToolStripMenuItem.Text = "Warehouse";
             this.warehouseToolStripMenuItem.Click += new System.EventHandler(this.warehouseToolStripMenuItem_Click);
             // 
@@ -128,7 +128,7 @@ namespace BidItWarehouse
             this.inventoryToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(61)))), ((int)(((byte)(73)))));
             this.inventoryToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
-            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.inventoryToolStripMenuItem.Text = "Inventory";
             this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.inventoryToolStripMenuItem_Click);
             // 
@@ -154,7 +154,7 @@ namespace BidItWarehouse
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
-            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.lblWarehouse);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 33);
@@ -162,17 +162,6 @@ namespace BidItWarehouse
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(808, 63);
             this.panel1.TabIndex = 25;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(92, 76);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 35;
-            this.pictureBox3.TabStop = false;
             // 
             // lblWarehouse
             // 
@@ -306,6 +295,17 @@ namespace BidItWarehouse
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(32)))), ((int)(((byte)(61)))));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(72, 72);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 36;
+            this.pictureBox4.TabStop = false;
+            // 
             // Warehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,9 +336,9 @@ namespace BidItWarehouse
             this.mnuMainMenu.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,7 +367,7 @@ namespace BidItWarehouse
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
