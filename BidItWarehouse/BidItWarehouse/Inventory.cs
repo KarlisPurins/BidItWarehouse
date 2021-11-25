@@ -13,6 +13,7 @@ namespace BidItWarehouse
 {
     public partial class Inventory : Form
     {
+        string idToDelete;
         public Inventory()
         {
             InitializeComponent();
@@ -20,11 +21,6 @@ namespace BidItWarehouse
         }
 
         private void lblWarehouse_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -82,6 +78,21 @@ namespace BidItWarehouse
             HttpResponseMessage response = client.GetAsync("/products").Result;
             var prod = response.Content.ReadAsAsync<IEnumerable<Product>>().Result;
             dataGridView1.DataSource = prod;
+        }
+
+        public void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idToDelete = this.dataGridView1.Rows[e.RowIndex].Cells["_ID"].Value.ToString();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            deleteProduct(idToDelete);
+        }
+        public static Task deleteProduct(string idToDelete)
+        {
+            HttpClient httpClient = new HttpClient();
+            return httpClient.DeleteAsync("https://biditwarehouse.herokuapp.com/products/" + idToDelete);
         }
     }
 }
