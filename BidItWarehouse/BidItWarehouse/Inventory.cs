@@ -138,6 +138,11 @@ namespace BidItWarehouse
         {
             panelUpdate.Visible = false;
         }
+
+        private void panelUpdate_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 
