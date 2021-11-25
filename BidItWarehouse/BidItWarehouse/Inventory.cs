@@ -143,6 +143,11 @@ namespace BidItWarehouse
         {
 
         }
+
+        private void lblDescription_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
