@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -175,6 +176,15 @@ namespace BidItWarehouse
         private void btnDeleteDeny_Click(object sender, EventArgs e)
         {
             panelDeleteConfirm.Visible = false;
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var client = new WebClient())
+            {
+                client.DownloadFile("https://biditwarehouse.herokuapp.com/products", "bidIt_printFile.txt");
+                MessageBox.Show("Successfully printed file! Please check your Debug folder!");
+            }
         }
     }
 }
