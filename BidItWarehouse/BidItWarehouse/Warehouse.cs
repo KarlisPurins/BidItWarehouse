@@ -100,11 +100,27 @@ namespace BidItWarehouse
             return httpClient.PostAsync("https://biditwarehouse.herokuapp.com/products", stringContent);
         }
 
-        private void btnSubmit_Click_2(object sender, EventArgs e)
+        /*private void btnSubmit_Click_2(object sender, EventArgs e)
         {
             Product product = new Product { name = txtName.Text, description = txtDescription.Text, startingPrice = txtStartPrice.Text, imageURL = txtImageURL.Text, };
             SubmitPersonToAPIAsync(product).Wait();
             MessageBox.Show("Posted!", "Submitted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }*/
+
+        private void btnSubmit_Click_2(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtName.Text) && !String.IsNullOrEmpty(txtStartPrice.Text) && !String.IsNullOrEmpty(txtDescription.Text) && !String.IsNullOrEmpty(txtImageURL.Text))
+            {
+                Product product = new Product { name = txtName.Text, description = txtDescription.Text, startingPrice = txtStartPrice.Text, imageURL = txtImageURL.Text, };
+                SubmitPersonToAPIAsync(product).Wait();
+                MessageBox.Show("Posted!", "Submitted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No fields should be left empty!");
+            }
+
+
         }
 
 
